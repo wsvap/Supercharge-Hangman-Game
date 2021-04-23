@@ -1,0 +1,22 @@
+html,
+body {
+  color: #252525;
+  background-color: #1f1f1f;
+  background-image: url("./assets/images/bg-left-bottom.png"), url("./assets/images/bg-right-top.png");
+  background-position: left bottom, right 58px;
+  background-repeat: no-repeat;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.content-box {
+  background-color: #fff;
+}
+
+h2,
+h3,
+.btn {
+  text-transform: uppercase;
+}

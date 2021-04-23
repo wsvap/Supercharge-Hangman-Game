@@ -1,0 +1,44 @@
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col col-lg-6">
+      <div class="d-flex flex-column align-items-center p-4 rounded content-box">
+
+        <div class="w-100 d-flex justify-content-end">
+          <a routerLink="/instructions" class="back-link">Instructions</a>
+        </div>
+
+        <h2 class="mt-3 mb-5">The Hangman</h2>
+
+        <p *ngIf="statusWin" class="win-text">
+          <img src="./assets/images/icon-won-game.png" alt="">
+          You've win
+        </p>
+        <p *ngIf="statusLost" class="lost-text">
+          <img src="./assets/images/icon-lost-game.png" alt="">
+          You've lost
+        </p>
+        <h5 *ngIf="!statusWin && !statusLost">It's a {{wordLength}} letter word</h5>
+
+        <h1>
+          <p>{{wordBox}}</p>
+        </h1>
+
+        <p *ngIf="!statusLost" class="mt-5">Play with a word</p>
+        <p *ngIf="!statusLost">
+          <button class="btn btn-outline-dark m-1 letter-button" id="btn-{{letter}}" (click)="letterClick(letter, $event)"
+                  *ngFor="let letter of letters">{{letter}}</button>
+        </p>
+
+        <div class="row mt-4">
+          <div class="col-6">
+            <button class="btn btn-outline-dark" (click)="endGame()">End Game</button>
+          </div>
+          <div class="col-6">
+            <button class="btn btn-dark" (click)="reloadGame()" style="white-space: nowrap;">Start New Game</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

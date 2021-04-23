@@ -1,0 +1,36 @@
+.letter-button {
+  width: 40px;
+}
+
+.back-link {
+  color: #000;
+  text-decoration: none;
+
+  &:after {
+    content: ' \2192';
+    font-size: 18px;
+    vertical-align: -1px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.win-text,
+.lost-text {
+  font-size: 20px;
+  font-weight: bold;
+
+  img {
+    vertical-align: -5px;
+  }
+}
+
+.win-text {
+  color: #5fd428;
+}
+
+.lost-text {
+  color: #ff1212;
+}

@@ -1,0 +1,44 @@
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col col-lg-6">
+      <div class="d-flex flex-column align-items-center p-4 rounded content-box">
+        <h2>The Hangman</h2>
+        <p class="my-5 text-center">
+          Let's play <strong>Hangman!</strong><br>
+          How many letters do you want in<br>
+          your word?
+        </p>
+
+        <div class="row" style="width: 225px;">
+          <div class="col-4 ">
+            <button class="btn btn-outline-dark m-2 number-button" (click)="pickWordByLength(3)">3</button>
+          </div>
+          <div class="col-4">
+            <button class="btn btn-outline-dark m-2 number-button" (click)="pickWordByLength(4)">4</button>
+          </div>
+          <div class="col-4">
+            <button class="btn btn-outline-dark m-2 number-button" (click)="pickWordByLength(5)">5</button>
+          </div>
+          <div class="col-4">
+            <button class="btn btn-outline-dark m-2 number-button" (click)="pickWordByLength(7)">7</button>
+          </div>
+          <div class="col-4">
+            <button class="btn btn-outline-dark m-2 number-button" (click)="pickWordByLength(8)">8</button>
+          </div>
+          <div class="col-4">
+            <button class="btn btn-outline-dark m-2 number-button" (click)="pickWordByLength(9)">9</button>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-outline-dark m-2 w-100 number-button" (click)="pickWordRandom()">Random</button>
+          </div>
+        </div>
+
+        <p class="mt-5" *ngIf="tooShortWord">Sorry, but we dont have this short word! :(</p>
+
+        <p class="mt-5" *ngIf="weGotOurWord">
+          <button class="btn btn-dark" routerLink="/game">Let's Play!</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
